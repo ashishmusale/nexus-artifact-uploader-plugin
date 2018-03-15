@@ -77,6 +77,7 @@ public class ArtifactRepositoryManager {
                 .addService(VersionRangeResolver.class, DefaultVersionRangeResolver.class)
                 .addService(ArtifactDescriptorReader.class, DefaultArtifactDescriptorReader.class)
                 .addService(MetadataGeneratorFactory.class, SnapshotMetadataGeneratorFactory.class)
+                .addService(MetadataGeneratorFactory.class, VersionsMetadataGeneratorFactory.class)
                 .setServices(WagonProvider.class, new ManualWagonProvider())
                 .getService(RepositorySystem.class);
 
